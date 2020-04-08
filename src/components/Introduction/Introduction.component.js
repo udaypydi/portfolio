@@ -2,6 +2,8 @@ import React from 'react';
 import { Button } from '../../common';
 import "./Introduction.scss";
 
+// introduction added
+
 const Introduction = (props) => {
     return (
         <div className="Introduction">
