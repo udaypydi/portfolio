@@ -1,6 +1,7 @@
 .Introduction {
     height: 100vh;
     display: flex;
+    flex-direction: column;
     flex: 1;
     justify-content: center;
     align-items: center;
@@ -8,13 +9,19 @@
     background: #667db6;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    .Introduction--image {
+        border-radius: 50%;
+        height: 200px;
+    }
     .Introduction__text {
-        text-align: left;
+        text-align: center;
     }
     .Introduction__header {
         font-size: 3rem;
     }
     .Introduction__name {
         font-size: 2rem;
+        text-align: center;
     }
 }

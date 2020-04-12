@@ -1,5 +1,4 @@
 import React from 'react';
-import { Button } from '../../common';
 import "./Introduction.scss";
 
 // introduction added
@@ -7,13 +6,11 @@ import "./Introduction.scss";
 const Introduction = (props) => {
     return (
         <div className="Introduction">
+            <img className="Introduction--image" src={require('../../assets/uday.png')} />
             <div className="Introduction__text">
-                <p className="Introduction__header">Hi, This is <strong>Uday Bhaskhar</strong></p>
-                <p className="Introduction__name">I am a passionate Javascript Engineer</p>
+                <p className="Introduction__header">Hello World</p>
+                <p className="Introduction__name">I am <strong>Uday Bhaskhar</strong> and I love <strong>Javascript</strong></p>
             </div>
-            <Button 
-                buttonText="LEARN MORE"
-            />
         </div>
     )
 }
