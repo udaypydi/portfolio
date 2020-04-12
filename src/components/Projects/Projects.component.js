@@ -5,16 +5,26 @@ import './Projects.scss';
 export default function Projects(props) {
     const [projects, setProjects] = useState([]);
     useEffect(() => {
-        fetch('https://api.github.com/users/udaypydi/repos?sort=updated&&type=owner')
-          .then(res => res.json())
-          .then(json => {
-            setProjects(json);
-          })
+        if (!props.projects) {
+            fetch('https://api.github.com/users/udaypydi/repos?sort=updated&&type=owner')
+            .then(res => res.json())
+            .then(json => {
+              setProjects(json);
+            })
+        } else {
+            setProjects(props.projects);
+        }
       }, []);
 
     return (
         <div className="Projects--Container">
-            <p className="Projects--Title">Projects ({projects.length})</p>
+            {
+                props.title ? (
+                    <p className="Projects--Title" style={{ textAlign: 'center' }}>{props.title} ({projects.length})</p>
+                ) : (
+                    <p className="Projects--Title">Projects ({projects.length})</p>
+                )   
+            }
             <div className="Projects">
             {
                 projects.map(project => (
