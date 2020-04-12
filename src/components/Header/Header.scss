@@ -1,0 +1,25 @@
+.Header {
+    display: flex;
+    width: 100vw;
+    background: transparent;
+    color: #ffffff;
+    position: fixed;
+    justify-content: flex-end;
+
+    .Header--Link {
+        color: #ffffff;
+        text-decoration: none;
+        margin: 20px;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .Header {
+        justify-content: center;
+    }
+
+    .Header--Link {
+        margin: 10px !important;
+    }
+}
+
