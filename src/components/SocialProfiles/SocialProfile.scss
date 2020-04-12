@@ -1,0 +1,10 @@
+.SocialProfiles {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .SocialProfiles--Image {
+        height: 40px;
+        margin: 10px;
+        cursor: pointer;
+    }
+}
