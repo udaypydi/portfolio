@@ -1,10 +1,13 @@
 .Header {
     display: flex;
     width: 100vw;
-    background: transparent;
     color: #ffffff;
     position: fixed;
     justify-content: flex-end;
+    background: #667db6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); 
+    z-index: 999999;
 
     .Header--Link {
         color: #ffffff;

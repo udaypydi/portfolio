@@ -1,0 +1,58 @@
+.Skills-Container {
+    background: #667db6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); 
+    height: 100vh;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.Skills {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 100px;
+    justify-content: space-between;
+
+    .Skills-Skill {
+        display: flex;
+        justify-content: space-between;
+        width: 40%;
+        align-items: center;
+
+        .Skills-SkillName {
+            width: 200px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #ffffff;
+        }
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .Skills-Container {
+        height: 100%;
+    }
+
+    .Skills {
+        display: flex;
+        flex: 1;
+        padding: 10px;
+        padding-top: 50px;
+        flex-direction: column;
+
+
+        .Skills-Skill {
+            display: flex;
+            flex:1;
+            justify-content: space-between;
+            width: 100%;
+
+            .Skills-SkillName {
+                width: 100px;
+                font-size: 1rem;
+            }
+        }
+    }
+}
