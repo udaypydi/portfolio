@@ -7,6 +7,17 @@
     flex: 1;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    padding-top: 50px;
+
+
+    .Skills--Title {
+        font-weight: 700;
+        font-size: 30px;
+        color: #ffffff;
+        padding: 10px;
+        border-bottom: 3px solid #ffffff;
+    }
 }
 
 .Skills {

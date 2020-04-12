@@ -7,6 +7,7 @@ import {
   import Header from './components/Header/Header.component';
   import Introduction from './components/Introduction/Introduction.component';
   import Skills from './components/Skills/Skills.component';
+  import Projects from './components/Projects/Projects.component';
 
   import App from './App';
 
@@ -31,6 +32,11 @@ import {
                 <Route path="/skills">
                     <WrappedRoute>
                         <Skills />
+                    </WrappedRoute>
+                </Route>
+                <Route path="/projects">
+                    <WrappedRoute>
+                        <Projects />
                     </WrappedRoute>
                 </Route>
                 <Route path="/">

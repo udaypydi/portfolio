@@ -6,6 +6,7 @@ import './Skills.scss';
 export default function Skills(props) {
     return (
         <div className="Skills-Container">
+            <p className="Skills--Title">Skills</p>
             <div className="Skills">
                 {
                     SKILLS.map(skill => (
