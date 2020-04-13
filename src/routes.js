@@ -9,6 +9,7 @@ import {
   import Skills from './components/Skills/Skills.component';
   import Projects from './components/Projects/Projects.component';
   import OpenSource from './components/OpenSource/OpenSource.component';
+  import Talks from './components/Talks/Talks.component';
 
   import App from './App';
 
@@ -43,6 +44,11 @@ import {
                 <Route path="/oss">
                     <WrappedRoute>
                         <OpenSource />
+                    </WrappedRoute>
+                </Route>
+                <Route path="/talks">
+                    <WrappedRoute>
+                        <Talks />
                     </WrappedRoute>
                 </Route>
                 <Route path="/">

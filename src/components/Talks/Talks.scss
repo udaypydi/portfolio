@@ -1,0 +1,76 @@
+.Talks--Container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    .Talks--Title {
+        font-weight: 700;
+        font-size: 30px;
+        color: #ffffff;
+        padding: 10px;
+        border-bottom: 3px solid #ffffff;
+        margin-top: 50px;
+    }
+
+    .Talks {
+        display: flex;
+        flex-wrap: wrap;
+        flex: 1;
+        width: 100%;
+        justify-content: center;
+        .Talks--Card {
+            background: #ffffff;
+            border-radius: 10px;
+            width: 40%;
+            margin: 10px;
+            min-height: 150px;
+            cursor: pointer;
+            -webkit-box-shadow: 1px 1px 1px 1px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+            -moz-box-shadow:    1px 1px 1px 1px #ccc;   /* Firefox 3.5 - 3.6 */
+            box-shadow:         1px 1px 1px 1px #ccc;  
+            display: flex;
+            
+            .Talks--Header {
+                font-weight: 700;
+                font-size: 20px;
+            }
+
+            .Talks--Location {
+                font-size: 18px;
+            }
+
+            .Talks--Image {
+                height: 200px;
+                width: 200px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .Talks--Container  {
+        flex-direction: column;
+        .Talks--Title {
+            margin-top: 50px;
+        }
+
+    
+        .Talks {
+            .Talks--Card {
+                width: 90% !important;
+                word-break: break-all;
+                .Talks--Image {
+                    height: 100px;
+                    width: 100px;
+                }
+
+                .Talks--Header {
+                    font-weight: 700;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
