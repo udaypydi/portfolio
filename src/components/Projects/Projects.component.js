@@ -19,45 +19,54 @@ export default function Projects(props) {
     return (
         <div className="Projects--Container">
             {
-                props.title ? (
-                    <p className="Projects--Title" style={{ textAlign: 'center' }}>{props.title} ({projects.length})</p>
-                ) : (
-                    <p className="Projects--Title">Projects ({projects.length})</p>
-                )   
-            }
-            <div className="Projects">
-            {
-                projects.map(project => (
-                    <div id="project.id" className="Projects--Card" onClick={() => window.open(project.html_url, '_blank')}>
-                        <p className="Project--Name">{project.name}</p>
-                        <p className="Project--Description">{project.description}</p>
+                projects.length ? (
+                    <React.Fragment>
                         {
-                            project.fork ? (
-                                <div className="Project-Stats-Value">
-                                    <img src={require('../../assets/icons/fork.svg')} />
-                                    <label style={{ marginLeft: 10 }}>Forked from {project.name}</label>
-                                </div>
+                            props.title ? (
+                                <p className="Projects--Title" style={{ textAlign: 'center' }}>{props.title} ({projects.length})</p>
                             ) : (
-                                <div className="Project-Stats">
-                                    <div className="Project-Stats-Value">
-                                        <img src={require('../../assets/icons/star.svg')} />
-                                        <label>{project.stargazers_count}</label>
-                                    </div>
-                                    <div className="Project-Stats-Value">
-                                        <img src={require('../../assets/icons/fork.svg')} />
-                                        <label>{project.forks_count}</label>
-                                    </div>
-                                    <div className="Project-Stats-Value">
-                                        <img src={require('../../assets/icons/time.svg')} />
-                                        <label>{moment(project.updated_at).format('MMMM Do YYYY')}</label>
-                                    </div>
-                                </div>
-                            )
+                                <p className="Projects--Title">Projects ({projects.length})</p>
+                            )   
                         }
-                    </div>
-                ))
+                        <div className="Projects">
+                            {
+                                projects.map(project => (
+                                    <div id="project.id" className="Projects--Card" onClick={() => window.open(project.html_url, '_blank')}>
+                                        <p className="Project--Name">{project.name}</p>
+                                        <p className="Project--Description">{project.description}</p>
+                                        {
+                                            project.fork ? (
+                                                <div className="Project-Stats-Value">
+                                                    <img src={require('../../assets/icons/fork.svg')} />
+                                                    <label style={{ marginLeft: 10 }}>Forked from {project.name}</label>
+                                                </div>
+                                            ) : (
+                                                <div className="Project-Stats">
+                                                    <div className="Project-Stats-Value">
+                                                        <img src={require('../../assets/icons/star.svg')} />
+                                                        <label>{project.stargazers_count}</label>
+                                                    </div>
+                                                    <div className="Project-Stats-Value">
+                                                        <img src={require('../../assets/icons/fork.svg')} />
+                                                        <label>{project.forks_count}</label>
+                                                    </div>
+                                                    <div className="Project-Stats-Value">
+                                                        <img src={require('../../assets/icons/time.svg')} />
+                                                        <label>{moment(project.updated_at).format('MMMM Do YYYY')}</label>
+                                                    </div>
+                                                </div>
+                                            )
+                                        }
+                                    </div>
+                                ))
+                            }
+                        </div>
+                    </React.Fragment>
+                ) : (
+                    <p className="Projects--Loader">Loading...</p>
+                )
             }
-        </div>
+           
         </div>
       
     );

@@ -42,8 +42,8 @@
             }
 
             .Talks--Image {
-                height: 200px;
-                width: 200px;
+                height: 200px !important;
+                width: 200px !important;
             }
         }
     }
@@ -62,8 +62,8 @@
                 width: 90% !important;
                 word-break: break-all;
                 .Talks--Image {
-                    height: 100px;
-                    width: 100px;
+                    height: 100px !important;
+                    width: 100px !important;
                 }
 
                 .Talks--Header {

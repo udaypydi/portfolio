@@ -63,6 +63,14 @@
             }
         }
     }
+
+    .Projects--Loader {
+        position: absolute;
+        color: #ffffff;
+        font-weight: 700;
+        top: 50%;
+        font-size: 20px;
+    }
 }
 
 @media only screen and (max-width: 760px) {

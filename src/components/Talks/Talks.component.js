@@ -10,7 +10,7 @@ export default function Talks(props) {
                     {
                         TalksData.map(talk => (
                             <div className="Talks--Card">
-                                <img className="Talks--Image " src={talk.image} />
+                                <img className="Talks--Image" src={talk.image} />
                                 <div>
                                     <p className="Talks--Header">{talk.name}</p>
                                     <p className="Talks--Location">Location: <strong>{talk.location}</strong></p>
