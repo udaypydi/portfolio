@@ -8,3 +8,4 @@
 - CSS
 - Tailwind CSS
 - Github API
+- SCSS
